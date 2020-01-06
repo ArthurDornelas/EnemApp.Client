@@ -1,0 +1,27 @@
+
+<form #registerForm="ngForm" (ngSubmit)="cadastrarCandidato()">
+  <h3>Adicionar candidato</h3>
+    <div class="form-cadastro" style="width: 400px;">
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="nome" required [(ngModel)]="candidato.nome"
+                name="nome">
+        </div>
+
+        <div class="form-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" class="form-control" id="cidade" required [(ngModel)]="candidato.cidade"
+                name="cidade">
+        </div>
+
+        <div class="form-group">
+            <label for="nota">Nota</label>
+            <input type="number" class="form-control" id="nota" required [(ngModel)]="candidato.nota" name="nota">
+        </div>
+
+        <div class="form-group text-center">
+          <button class="btn btn-success" type="submit">Cadastrar</button>
+          <button class="btn btn-default" type="button" (click)="cancel()">Cancelar</button>
+        </div>
+    </div>
+  </form>
