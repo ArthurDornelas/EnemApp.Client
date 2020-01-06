@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'get/:id', component: CandidatoGetComponent },
   { path: 'cadastrar', component: CandidatoCreateComponent},
   { path: 'put/:id', component: CandidatoUpdateComponent},
-  { path: 'exibirResultados', component: CandidatoAprovadosComponent}
+  { path: 'realizarConcurso', component: CandidatoAprovadosComponent}
 ];
 
 @NgModule({

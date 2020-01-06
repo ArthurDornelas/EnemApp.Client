@@ -29,7 +29,7 @@ export class CandidatoService {
     return this.http.delete(this.baseUrl + '/' + id);
   }
 
-  exibirResultados(numVagas: any) {
-    return this.http.put(this.baseUrl + '/exibirResultados/' + numVagas, null);
+  realizarConcurso(numVagas: any) {
+    return this.http.put(this.baseUrl + '/realizarConcurso/' + numVagas, null);
   }
 }

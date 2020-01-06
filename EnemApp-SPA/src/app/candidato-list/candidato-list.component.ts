@@ -21,6 +21,7 @@ export class CandidatoListComponent implements OnInit {
 
   listarCandidatos() {
     this.candidatoService.listarCandidatos().subscribe(response => {
+      debugger
       this.candidatos = response;
     }, error => {
       console.log(error);

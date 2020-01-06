@@ -1,20 +1,22 @@
-<h2>Detalhes do candidato</h2> 
-
-<hr/>
-<div *ngIf="candidato">
-  <div>
-    <label><b>Id: </b></label> {{candidato.id}}
+<br>
+<h2>Detalhes do candidato</h2><hr>
+<br>
+<div class="container-fluid">
+  <hr />
+  <div *ngIf="candidato">
+    <div class="form-info">
+      <label><b>Id: </b></label> {{candidato.id}}
+    </div>
+    <div class="form-info">
+      <label><b>Nome: </b></label> {{candidato.nome}}
+    </div>
+    <div class="form-info">
+      <label><b>Cidade: </b></label> {{candidato.cidade}}
+    </div>
+    <div class="form-info">
+      <label><b>Nota: </b></label> {{candidato.nota}}
+    </div>
   </div>
-  <div>
-    <label><b>Nome: </b></label> {{candidato.nome}}
-  </div>
-  <div>
-    <label><b>Cidade: </b></label> {{candidato.cidade}}
-  </div>
-  <div>
-    <label><b>Nota: </b></label> {{candidato.nota}}
-  </div>
-</div>
-
 <br>
 <button (click)="toList()" class="btn btn-primary">Voltar</button><br>
+</div>

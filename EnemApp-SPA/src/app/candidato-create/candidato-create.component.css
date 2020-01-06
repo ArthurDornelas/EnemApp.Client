@@ -1,4 +1,11 @@
-.form-cadastro{
-    display: inline-block;
-    margin: 20px;
+h3{
+    text-align: center;
 }
+.form-create{
+    text-align: -webkit-center;
+}
+
+.form-group{
+    text-align: left;
+}
+

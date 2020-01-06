@@ -1,0 +1,11 @@
+h2{
+    text-align: center;
+}
+.container-fluid{
+    text-align: -webkit-center;
+    width: 400px;
+}
+
+.form-info{
+    text-align: left;
+}
