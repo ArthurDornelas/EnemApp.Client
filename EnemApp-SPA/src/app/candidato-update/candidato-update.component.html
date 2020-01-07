@@ -16,7 +16,8 @@
 
     <div class="form-group">
       <label for="nota">Nota</label>
-      <input type="number" class="form-control" required name="nota" [(ngModel)]="candidato.nota" placeholder="Nota">
+      <input type="number" class="form-control" required name="nota" [(ngModel)]="candidato.nota" placeholder="Nota" 
+        onkeypress="return event.charCode >= 48 && event.charCode <= 57 ||  event.charCode == 44">
     </div>
     <br>
     <div class="form-group text-center">

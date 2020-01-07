@@ -14,6 +14,7 @@ import { CandidatoAprovadosComponent } from './candidato-aprovados/candidato-apr
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
    declarations: [
@@ -31,10 +32,11 @@ import { FooterComponent } from './footer/footer.component';
       BrowserModule,
       AppRouteModule,
       FormsModule,
-      HttpClientModule
+      HttpClientModule,
+      ModalModule.forRoot()
    ],
    providers: [
-      CandidatoService
+      CandidatoService,
    ],
    bootstrap: [
       AppComponent

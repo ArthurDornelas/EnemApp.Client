@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { CandidatoService } from '../_services/candidato.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-candidato-list',
@@ -10,10 +11,12 @@ import { Router } from '@angular/router';
 })
 export class CandidatoListComponent implements OnInit {
   candidatos: any;
+  modalRef: BsModalRef;
 
   constructor(
     private candidatoService: CandidatoService,
-    private router: Router) { }
+    private router: Router,
+    private modalService: BsModalService) { }
 
   ngOnInit() {
     this.listarCandidatos();
@@ -21,7 +24,6 @@ export class CandidatoListComponent implements OnInit {
 
   listarCandidatos() {
     this.candidatoService.listarCandidatos().subscribe(response => {
-      debugger
       this.candidatos = response;
     }, error => {
       console.log(error);
@@ -36,12 +38,22 @@ export class CandidatoListComponent implements OnInit {
     this.router.navigate(['put/', id]);
   }
 
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
+  }
+
   deletarCandidato(id: any) {
-    this.candidatoService.deletarCandidato(id).subscribe(data => {
+
+      this.candidatoService.deletarCandidato(id).subscribe(data => {
       this.listarCandidatos();
-    }, error => {
-      console.log(error);
-    });
+      }, error => {
+        console.log(error);
+      });
+      this.modalRef.hide();
+  }
+
+  decline(): void {
+    this.modalRef.hide();
   }
 
 }

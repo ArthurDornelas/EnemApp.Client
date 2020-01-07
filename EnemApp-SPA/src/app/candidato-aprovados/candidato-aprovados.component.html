@@ -1,13 +1,13 @@
 <br>
-<h1 class="h3 mb-3 font-weight-normal">Realizar Concurso</h1><hr><br>
-
+<h3>Realizar Concurso</h3><hr>
+<br>
 <div class="form-aprovado">
   <form #resultForm=ngForm style="width: 400px;" (ngSubmit)=realizarConcurso() class="form-signin">
 
     <div class="form-group">
         <label for="nota">Insira o número de vagas:</label>
-      <input type="number" class="form-control" required name="numVagas" [(ngModel)]="numVagas"
-        placeholder="Numero de Vagas">
+      <input type="number" class="form-control" required name="numVagas" [(ngModel)]="numVagas" placeholder="Numero de Vagas" 
+       onkeypress="return event.charCode >= 48 && event.charCode <= 57">
     </div>
     <br>
     <button class="btn btn-success" type="submit">Continuar</button>

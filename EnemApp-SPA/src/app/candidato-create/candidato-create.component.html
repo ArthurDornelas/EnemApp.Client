@@ -18,7 +18,8 @@
 
       <div class="form-group">
           <label for="nota">Nota</label>
-          <input type="number" class="form-control" id="nota" required [(ngModel)]="candidato.nota" name="nota">
+          <input type="number" class="form-control" id="nota" required [(ngModel)]="candidato.nota" name="nota" 
+             onkeypress="return event.charCode >= 48 && event.charCode <= 57 ||  event.charCode == 44">
       </div>
       <br>
       <div class="form-group text-center">
