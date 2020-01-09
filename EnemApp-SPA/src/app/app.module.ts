@@ -15,6 +15,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
    declarations: [
@@ -33,7 +35,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
       AppRouteModule,
       FormsModule,
       HttpClientModule,
-      ModalModule.forRoot()
+      ModalModule.forRoot(),
+      BrowserAnimationsModule,
+      ToastrModule.forRoot()
    ],
    providers: [
       CandidatoService,
