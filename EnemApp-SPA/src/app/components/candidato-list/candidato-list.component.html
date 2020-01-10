@@ -1,0 +1,49 @@
+<div class="panel-heading">
+  <br>
+  <h3>Lista de Candidatos</h3>
+  <hr>
+  <br>
+</div>
+<div class="form-list">
+  <div class="panel panel-primary" style="width: 900px;">
+    <div class="panel-body">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Classificação</th>
+            <th>Nome</th>
+            <th>Cidade</th>
+            <th>Nota</th>
+            <th>Situação</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let candidato of candidatos let i = index" [attr.data-index]="i">
+            <td>{{i+1}}</td>
+            <td>{{candidato.nome}}</td>
+            <td>{{candidato.cidade}}</td>
+            <td>{{candidato.nota}}</td>
+            <td>{{candidato.aprovado? "Aprovado" : "Reprovado"}}</td>
+            <td>
+              <button (click)="getCandidato(candidato.id)" class="btn btn-primary mr-2">Detalhe</button>
+              <button (click)="atualizarCandidato(candidato.id)" class="btn btn-warning mr-2">Update</button>
+              <button (click)="openModal(delete)" class="btn btn-danger">Delete</button>
+
+              <ng-template #delete>
+                <div class="modal-body text-center">
+                  <p>Deseja deletar o candidato?</p>
+                  <button type="button" class="btn btn-primary" (click)="decline()" >Não</button>
+                  <button type="button" class="btn btn-default" (click)="deletarCandidato(candidato.id)" >Sim</button>
+                </div>
+              </ng-template>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+      <!-- Botão para acionar modal -->
+    </div>
+  </div>
+</div>

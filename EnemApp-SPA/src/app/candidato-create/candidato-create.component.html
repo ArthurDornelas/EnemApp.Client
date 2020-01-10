@@ -2,24 +2,24 @@
 <h3> Adicionar Candidato </h3>
 <hr><br>
 
-
 <div class="form-create">
   <form #registerForm="ngForm" style="width: 400px" (ngSubmit)="cadastrarCandidato()">
     <div class="container-fluid">
       <div class="form-group">
-        <label for="name">Nome</label>
+        <label for="name" class="required">Nome</label>
         <input type="text" class="form-control" id="nome" required [(ngModel)]="candidato.nome" name="nome">
       </div>
 
       <div class="form-group">
-        <label for="cidade">Cidade</label>
+        <label for="cidade" class="required">Cidade</label>
         <input type="text" class="form-control" id="cidade" required [(ngModel)]="candidato.cidade" name="cidade">
       </div>
 
       <div class="form-group">
-          <label for="nota">Nota</label>
+          <label for="nota" class="required">Nota</label>
           <input type="number" class="form-control" id="nota" required [(ngModel)]="candidato.nota" name="nota" 
              onkeypress="return event.charCode >= 48 && event.charCode <= 57 ||  event.charCode == 44">
+          <label for="campo-obrigatorio" class="write-required">* Campos Obrigatórios</label>
       </div>
       <br>
       <div class="form-group text-center">

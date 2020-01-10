@@ -3,6 +3,7 @@ import { CandidatoService } from '../_services/candidato.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { isNullOrUndefined} from 'util';
+import { Candidato } from '../model/candidato.model';
 
 @Component({
   selector: 'app-candidato-create',
@@ -10,7 +11,7 @@ import { isNullOrUndefined} from 'util';
   styleUrls: ['./candidato-create.component.css']
 })
 export class CandidatoCreateComponent implements OnInit {
-  candidato: any = {};
+  candidato: Candidato = new Candidato();
 
   constructor(
     private candidatoService: CandidatoService,

@@ -16,7 +16,7 @@ export class CandidatoAprovadosComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.realizarConcurso();
+    // this.realizarConcurso();
   }
 
   realizarConcurso() {

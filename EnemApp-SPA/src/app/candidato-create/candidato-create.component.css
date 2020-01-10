@@ -10,3 +10,13 @@ h3{
     text-align: left;
 }
 
+.required:after {
+    content:" *"; 
+    color: red;
+}
+
+.write-required{
+    color: red;
+    text-align: right;
+    font-size: small;
+}

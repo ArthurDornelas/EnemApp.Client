@@ -1,24 +1,26 @@
 <br>
-<h2>Update de Candidato</h2>
-<hr>
+<h3>Update de Candidato</h3>
+<hr><br>
 <div class="form-update" >
   <form #updateForm="ngForm" style="width: 400px;" (ngSubmit)="atualizarCandidato()">
     <div class="form-group">
-      <label for="name">Nome</label>
+      <label for="name" class="required">Nome</label>
       <input type="text" class="form-control" required name="nome" [(ngModel)]="candidato.nome" placeholder="Nome">
     </div>
 
     <div class="form-group">
-      <label for="cidade">Cidade</label>
+      <label for="cidade" class="required">Cidade</label>
       <input type="text" class="form-control" required name="cidade" [(ngModel)]="candidato.cidade"
         placeholder="Cidade">
     </div>
 
     <div class="form-group">
-      <label for="nota">Nota</label>
+      <label for="nota" class="required">Nota</label>
       <input type="number" class="form-control" required name="nota" [(ngModel)]="candidato.nota" placeholder="Nota" 
         onkeypress="return event.charCode >= 48 && event.charCode <= 57 ||  event.charCode == 44">
+      <label for="campo-obrigatorio" class="write-required">* Campos Obrigatórios</label>
     </div>
+
     <br>
     <div class="form-group text-center">
       <button class="btn btn-info" type="submit">Atualizar</button>
