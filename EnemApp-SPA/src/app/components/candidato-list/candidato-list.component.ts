@@ -21,7 +21,7 @@ export class CandidatoListComponent implements OnInit {
     this.listarCandidatos();
   }
 
-  listarCandidatos() {
+  public listarCandidatos(): void {
     this.candidatoService.listarCandidatos().subscribe(response => {
       this.candidatos = response;
     }, error => {
@@ -29,19 +29,19 @@ export class CandidatoListComponent implements OnInit {
     });
   }
 
-  getCandidato(id: any) {
+  public getCandidato(id: any): void {
     this.router.navigate(['get/', id]);
   }
 
-  atualizarCandidato(id: any) {
+  public atualizarCandidato(id: any): void {
     this.router.navigate(['put/', id]);
   }
 
-  openModal(template: TemplateRef<any>) {
+  public openModal(template: TemplateRef<any>): void {
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
   }
 
-  deletarCandidato(id: any) {
+  public deletarCandidato(id: any): void {
 
       this.candidatoService.deletarCandidato(id).subscribe(data => {
       this.listarCandidatos();
@@ -51,7 +51,7 @@ export class CandidatoListComponent implements OnInit {
       this.modalRef.hide();
   }
 
-  decline(): void {
+  public decline(): void {
     this.modalRef.hide();
   }
 

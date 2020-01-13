@@ -1,0 +1,25 @@
+<br>
+<h3>Detalhes do candidato</h3><hr>
+<br>
+<div class="container-fluid">
+  <hr />
+  <div *ngIf="candidato">
+    <div class="form-info">
+      <label><b>Id: </b></label> {{candidato.id}}
+    </div>
+    <div class="form-info">
+      <label><b>Nome: </b></label> {{candidato.nome}}
+    </div>
+    <div class="form-info">
+      <label><b>Cidade: </b></label> {{candidato.cidade}}
+    </div>
+    <div class="form-info">
+      <label><b>Nota: </b></label> {{candidato.nota}}
+    </div>
+    <div class="form-info">
+      <label><b>Situação: </b></label> {{candidato.aprovado? "Aprovado" : "Reprovado"}}
+    </div>
+  </div>
+<br>
+<button (click)="toList()" class="btn btn-primary">Voltar</button><br>
+</div>
