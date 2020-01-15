@@ -9,18 +9,28 @@
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a routerLink="home" class="nav-link" routerLinkActive="active">Home</a>
+        <li class="nav-item mr-2">
+          <a routerLink="home" class="nav-link mr-2" routerLinkActive="active"><i class="fas fa-home"></i></a>
         </li>
-        <li class="nav-item">
-          <a routerLink="cadastrar" class="nav-link" routerLinkActive="active">Adicionar Candidato</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="candidatos" class="nav-link" routerLinkActive="active">Lista de candidatos</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="realizarConcurso" class="nav-link" routerLinkActive="active">Realizar Concurso</a>
-        </li>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle mr-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Área Candidato
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item"  href="cadastrar">Adicionar Candidato</a>
+            <a class="dropdown-item"  href="candidatos">Lista de candidatos</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Área Concurso
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item"  href="cadastrarConcurso">Adicionar Concurso</a>
+            <a class="dropdown-item"  href="concursos">Lista de Concursos</a>
+            <a class="dropdown-item"  href="realizarConcurso">Realizar Concurso</a>
+          </div>
+        </div>
       </ul>
     </div>
   </div>

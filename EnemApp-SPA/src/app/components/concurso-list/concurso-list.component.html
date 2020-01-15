@@ -1,0 +1,29 @@
+<div class="panel-heading">
+  <br>
+  <h3>Lista de Concursos</h3>
+  <hr>
+  <br>
+</div>
+<div class="form-list">
+  <div class="panel panel-primary" style="width: 900px;">
+    <div class="panel-body">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Número de Vagas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let concurso of concursos">
+            <td>{{concurso.nome}}</td>
+            <td>{{concurso.dataRealizacao}}</td>
+            <td>{{concurso.numeroVagas}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Botão para acionar modal -->
+    </div>
+  </div>
+</div>

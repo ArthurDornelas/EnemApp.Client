@@ -10,7 +10,9 @@ const routes: Routes = [
   { path: 'cadastrar', loadChildren: '../components/candidato-create/candidato-create.component.module#CandidatoCreateModule' },
   { path: 'put/:id', loadChildren: '../components/candidato-update/candidato-update.component.module#CandidatoUpdateModule' },
   { path: 'realizarConcurso',
-    loadChildren: '../components/candidato-aprovados/candidato-aprovados.component.module#CandidatoAprovadosModule'}
+    loadChildren: '../components/candidato-aprovados/candidato-aprovados.component.module#CandidatoAprovadosModule'},
+  { path: 'cadastrarConcurso', loadChildren: '../components/concurso-create/concurso-create.component.module#ConcursoCreateModule'},
+  { path: 'concursos', loadChildren: '../components/concurso-list/concurso-list.component.module#ConcursoListModule'}
 ];
 
 @NgModule({

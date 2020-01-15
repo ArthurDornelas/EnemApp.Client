@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ConcursoService } from './_services/concurso.service';
 
 @NgModule({
    declarations: [
@@ -30,6 +31,7 @@ import { ToastrModule } from 'ngx-toastr';
    ],
    providers: [
       CandidatoService,
+      ConcursoService
    ],
    bootstrap: [
       AppComponent
