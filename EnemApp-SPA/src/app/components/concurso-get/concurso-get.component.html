@@ -1,0 +1,22 @@
+<br>
+<h3>Detalhes do concurso</h3><hr>
+<br>
+<div class="container-fluid">
+  <hr />
+  <div *ngIf="concurso">
+    <div class="form-info">
+      <label><b>Id: </b></label> {{concurso.id}}
+    </div>
+    <div class="form-info">
+      <label><b>Nome: </b></label> {{concurso.nome}}
+    </div>
+    <div class="form-info">
+      <label><b>Data de Realização: </b></label> {{concurso.dataRealizacao}}
+    </div>
+    <div class="form-info">
+      <label><b>Número de Vagas: </b></label> {{concurso.numeroVagas}}
+    </div>
+  </div>
+<br>
+<button (click)="toList()" class="btn btn-primary">Voltar</button><br>
+</div>

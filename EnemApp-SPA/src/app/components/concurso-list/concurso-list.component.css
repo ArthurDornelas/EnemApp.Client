@@ -13,3 +13,12 @@ th{
 td{
     text-align: center;
 }
+
+.fas {
+    color: white;
+}
+
+.btn:hover .fas{
+    color: black;
+    
+}

@@ -1,0 +1,38 @@
+<br>
+<h3>Update de Concurso</h3>
+<hr><br>
+<div class="form-update" >
+  <form #updateForm="ngForm" style="width: 400px;" (ngSubmit)="atualizarConcurso()">
+    <div class="form-group">
+      <label for="name" class="required">Nome</label>
+      <input type="text" class="form-control" required name="nome" [(ngModel)]="concurso.nome" placeholder="Nome">
+    </div>
+
+    <div class="form-group">
+      <label for="dataRealizacao" class="required">Data de Realização</label>
+      <input type="date" class="form-control" required name="dataRealizacao" [(ngModel)]="concurso.dataRealizacao"
+        placeholder="Data de Realização">
+    </div>
+
+    <div class="form-group">
+      <label for="numeroVagas" class="required">Número de Vagas</label>
+      <input type="number" class="form-control" required name="numeroVagas" [(ngModel)]="concurso.numeroVagas" placeholder="Número de Vagas" 
+       onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+      <label for="campo-obrigatorio" class="write-required">* Campos Obrigatórios</label>
+    </div>
+
+    <br>
+    <div class="form-group text-center">
+      <button (click)="openModal(atualizar)" class="btn btn-info" type="button">Atualizar</button>
+      <button (click)="cancel()" class="btn btn-default" type="button">Cancelar</button>
+
+      <ng-template #atualizar>
+        <div class="modal-body text-center">
+          <p>Deseja atualizar o candidato?</p>
+          <button type="button" class="btn btn-primary" (click)="decline()" >Não</button>
+          <button type="button" class="btn btn-default" (click)="attConcurso()" >Sim</button>
+        </div>
+      </ng-template>
+    </div>
+  </form>
+</div>

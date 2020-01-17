@@ -27,7 +27,7 @@ export class ConcursoCreateComponent implements OnInit {
       this.toastr.success('Concurso cadastrado com sucesso!');
       console.log('registrado com sucesso!');
       console.log(data);
-      this.router.navigate(['candidatos']);
+      this.router.navigate(['concursos']);
     }, error => {
       this.submitted = false;
       error.error.errors ?
@@ -48,6 +48,6 @@ export class ConcursoCreateComponent implements OnInit {
   }
 
   public cancel(): void {
-    this.router.navigate(['candidatos']);
+    this.router.navigate(['concursos']);
   }
 }

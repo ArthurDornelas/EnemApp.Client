@@ -13,6 +13,7 @@
             <th>Nome</th>
             <th>Data</th>
             <th>Número de Vagas</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -20,6 +21,19 @@
             <td>{{concurso.nome}}</td>
             <td>{{concurso.dataRealizacao}}</td>
             <td>{{concurso.numeroVagas}}</td>
+            <td>
+              <button (click)="getConcurso(concurso.id)" class="btn btn-primary mr-2"><i class="fas fa-address-card"></i></button>
+              <button (click)="atualizarConcurso(concurso.id)" class="btn btn-warning mr-2"><i class="fas fa-pen"></i></button>
+              <button (click)="openModal(delete)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+
+              <ng-template #delete>
+                <div class="modal-body text-center">
+                  <p>Deseja deletar o candidato?</p>
+                  <button type="button" class="btn btn-primary" (click)="decline()" >Não</button>
+                  <button type="button" class="btn btn-default" (click)="deletarConcurso(concurso.id)" >Sim</button>
+                </div>
+              </ng-template>
+            </td>
           </tr>
         </tbody>
       </table>
